@@ -4,7 +4,6 @@ function Input({
   size = 'small',
   className,
   name,
-  label,
   type = 'text',
   placeholder,
   value,
@@ -21,24 +20,17 @@ function Input({
     inputClassSize = 'py-4 px-2 text-xl';
   }
   return (
-    <>
-      {label && (
-        <label htmlFor={name} className="form-label inline-block mt-4 mb-2 text-zinc-200">
-          {label}
-        </label>
-      )}
-      <input
-        name={name}
-        id={name}
-        className={`${inputClassSize} ${className ?? ''}`}
-        type={type}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        required={required}
-        disabled={disabled}
-      />
-    </>
+    <input
+      name={name}
+      id={name}
+      className={`${inputClassSize} ${className ?? ''}`}
+      type={type}
+      placeholder={placeholder}
+      value={value}
+      onChange={onChange}
+      required={required}
+      disabled={disabled}
+    />
   );
 }
 
