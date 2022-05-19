@@ -9,8 +9,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 function Navbar() {
   const MODAL_ID = useId().replace(/:/g, '');
   return (
-    <header>
-      <nav className="flex flex-row justify-between p-5 items-center">
+    <header className="mb-7">
+      <nav className="flex flex-row justify-between p-5 px-9 items-center">
         <div className="w-28 md:w-36">
           <Logo />
         </div>
