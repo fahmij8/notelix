@@ -4,12 +4,14 @@ function Textarea({
   name,
   cols,
   rows,
-  onChange,
   value,
   className,
   required,
   disabled,
   placeholder,
+  onChange,
+  onFocus,
+  onBlur,
 }: TextareaProps) {
   return (
     <textarea
@@ -17,12 +19,14 @@ function Textarea({
       id={name}
       cols={cols}
       rows={rows}
-      onChange={onChange}
       value={value}
       className={className ?? ''}
       required={required}
       disabled={disabled}
       placeholder={placeholder}
+      onChange={onChange}
+      onFocus={onFocus}
+      onBlur={onBlur}
     />
   );
 }
