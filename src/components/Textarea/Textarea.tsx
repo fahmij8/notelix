@@ -19,7 +19,7 @@ function Textarea({
       rows={rows}
       onChange={onChange}
       value={value}
-      className={className}
+      className={className ?? ''}
       required={required}
       disabled={disabled}
       placeholder={placeholder}
