@@ -1,3 +1,5 @@
+import type { Note } from 'types';
+
 export type InputProps = {
   type?: React.HTMLInputTypeAttribute;
   name: string;
@@ -15,7 +17,7 @@ export type ButtonProps = {
   size?: 'small' | 'medium' | 'large';
   theme?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger' | 'transparent';
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
-  className?: React.ClassAttributes<HTMLButtonElement>;
+  className?: string;
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
   isModalTrigger?: boolean;
@@ -32,6 +34,8 @@ export type TextareaProps = {
   required?: boolean;
   disabled?: boolean;
   onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+  onFocus?: React.FocusEventHandler<HTMLTextAreaElement>;
+  onBlur?: React.FocusEventHandler<HTMLTextAreaElement>;
 };
 
 export type LabelProps = {
@@ -46,3 +50,5 @@ export type ModalProps = {
 };
 
 export type SearchProps = { className?: string };
+
+export type FormProps = { notes: Note[]; setNotes: (notes: Note[]) => void };
