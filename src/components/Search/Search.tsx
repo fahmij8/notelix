@@ -1,11 +1,12 @@
-import { useState } from 'react';
 import Input from 'components/Input';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import type { SearchProps } from 'types';
+import { useSearchValue } from 'hooks';
 
 function Search({ className }: SearchProps) {
-  const [search, setSearch] = useState('');
+  const { value, setValue } = useSearchValue();
+
   return (
     <form className={`flex flex-row items-center ${className ?? ''}`}>
       <Input
@@ -14,8 +15,8 @@ function Search({ className }: SearchProps) {
         name="search"
         placeholder="Search Notes..."
         className="mr-2"
-        value={search}
-        onChange={(e) => setSearch(e.target.value)}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
       />
       <FontAwesomeIcon icon={faSearch} size="lg" />
     </form>
