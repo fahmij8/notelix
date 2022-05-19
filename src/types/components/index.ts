@@ -2,7 +2,7 @@ export type InputProps = {
   type?: React.HTMLInputTypeAttribute;
   name: string;
   size?: 'small' | 'medium' | 'large';
-  className?: React.ClassAttributes<HTMLInputElement>;
+  className?: string;
   placeholder?: string;
   value?: string;
   required?: boolean;
@@ -13,11 +13,13 @@ export type InputProps = {
 export type ButtonProps = {
   children: React.ReactNode;
   size?: 'small' | 'medium' | 'large';
-  theme?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger';
+  theme?: 'primary' | 'secondary' | 'info' | 'success' | 'warning' | 'danger' | 'transparent';
   type?: React.ButtonHTMLAttributes<HTMLButtonElement>['type'];
   className?: React.ClassAttributes<HTMLButtonElement>;
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+  isModalTrigger?: boolean;
+  modalId?: string;
 };
 
 export type TextareaProps = {
@@ -37,3 +39,10 @@ export type LabelProps = {
   name: string;
   className?: string;
 };
+
+export type ModalProps = {
+  children: React.ReactNode;
+  id: string;
+};
+
+export type SearchProps = { className?: string };
