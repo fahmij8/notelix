@@ -21,7 +21,7 @@ Input {
 }
 
 Label {
-  @apply form-label inline-block mt-4 mb-2 text-zinc-200;
+  @apply inline-block mt-4 mb-2 text-zinc-200;
 }
 
 Textarea {
@@ -66,4 +66,8 @@ Button {
 
 .button-danger {
   @apply bg-danger text-zinc-50 hover:bg-danger/90 focus:bg-danger/90 active:bg-danger/50 disabled:bg-red-200;
+}
+
+.button-transparent {
+  @apply bg-transparent text-zinc-50 hover:bg-transparent focus:bg-transparent active:bg-transparent disabled:bg-transparent;
 }
