@@ -11,7 +11,10 @@
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
     "plugin:import/errors",
-    "airbnb"
+    "plugin:testing-library/react",
+    "plugin:jest-dom/recommended",
+    "airbnb",
+    "airbnb-typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,7 +22,8 @@
       "jsx": true
     },
     "ecmaVersion": "latest",
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "plugins": ["react", "@typescript-eslint", "import", "jsx-a11y", "react-hooks"],
   "settings": {
@@ -31,7 +35,9 @@
     }
   },
   "rules": {
-    "react/jsx-filename-extension": [2, {"extensions": [".js", ".jsx", ".ts", ".tsx"]}],
-    "react/react-in-jsx-scope": "off"
-  }
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "react/react-in-jsx-scope": "off",
+    "react/jsx-props-no-spreading": "off"
+  },
+  "ignorePatterns": ["tailwind.config.js"]
 }
