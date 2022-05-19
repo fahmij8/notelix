@@ -17,7 +17,15 @@
 }
 
 Input {
-  @apply form-control text-black block w-full bg-clip-padding rounded shadow-lg focus:outline-none transition ease-in-out m-0 focus:ring-0;
+  @apply form-control text-black block w-full bg-clip-padding rounded shadow-lg focus:outline-primary focus:outline-2 focus:outline-offset-2 focus:ring-0 ease-out duration-200;
+}
+
+Label {
+  @apply form-label inline-block mt-4 mb-2 text-zinc-200;
+}
+
+Textarea {
+  @apply form-control text-black block w-full bg-clip-padding rounded shadow-lg focus:outline-primary focus:outline-2 focus:outline-offset-2 focus:ring-0 ease-out duration-200 px-3 py-1.5;
 }
 
 Button {
