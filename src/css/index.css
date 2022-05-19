@@ -11,3 +11,51 @@
 * {
   @apply m-0 p-0 box-border scroll-smooth;
 }
+
+.App {
+  @apply min-h-screen bg-[#1F1D2C] text-white;
+}
+
+Input {
+  @apply form-control text-black block w-full bg-clip-padding rounded shadow-lg focus:outline-none transition ease-in-out m-0 focus:ring-0;
+}
+
+Button {
+  @apply inline-block leading-tight focus:outline-none focus:ring-0;
+}
+
+.button-small {
+  @apply py-1.5 px-2.5 font-medium text-xs;
+}
+
+.button-medium {
+  @apply py-2 px-3 font-medium text-sm;
+}
+
+.button-large {
+  @apply py-3 px-4 font-medium text-base;
+}
+
+.button-primary {
+  @apply bg-primary text-zinc-50 hover:bg-primary/90 focus:bg-primary/90 active:bg-primary/50 disabled:bg-indigo-300;
+}
+
+.button-secondary {
+  @apply bg-secondary text-zinc-50 hover:bg-secondary/90 focus:bg-secondary/90 active:bg-secondary/50 disabled:bg-yellow-200;
+}
+
+.button-info {
+  @apply bg-info text-zinc-50 hover:bg-info/90 focus:bg-info/90 active:bg-info/50 disabled:bg-blue-200;
+}
+
+.button-success {
+  @apply bg-success text-zinc-50 hover:bg-success/90 focus:bg-success/90 active:bg-success/50 disabled:bg-green-200;
+}
+
+.button-warning {
+  @apply bg-warning text-zinc-50 hover:bg-warning/90 focus:bg-warning/90 active:bg-warning/50 disabled:bg-orange-200;
+}
+
+.button-danger {
+  @apply bg-danger text-zinc-50 hover:bg-danger/90 focus:bg-danger/90 active:bg-danger/50 disabled:bg-red-200;
+}
