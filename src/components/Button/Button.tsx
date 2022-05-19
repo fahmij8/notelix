@@ -9,6 +9,8 @@ function Button({
   disabled,
   onClick,
   children,
+  isModalTrigger,
+  modalId,
 }: ButtonProps) {
   let buttonDefaultClass;
   if (theme === 'primary') {
@@ -23,6 +25,8 @@ function Button({
     buttonDefaultClass = 'button-warning ';
   } else if (theme === 'danger') {
     buttonDefaultClass = 'button-danger ';
+  } else if (theme === 'transparent') {
+    buttonDefaultClass = 'button-transparent ';
   }
 
   if (size === 'small') {
@@ -35,7 +39,7 @@ function Button({
 
   return (
     <motion.button
-      className={`${buttonDefaultClass} ${className}`}
+      className={`${buttonDefaultClass} ${className ?? ''}`}
       onClick={onClick}
       type={type}
       data-mdb-ripple="true"
@@ -44,6 +48,8 @@ function Button({
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.9 }}
       disabled={disabled}
+      data-bs-toggle={isModalTrigger ? 'modal' : undefined}
+      data-bs-target={isModalTrigger ? `#${modalId}` : undefined}
     >
       {children}
     </motion.button>
