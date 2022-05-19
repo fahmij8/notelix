@@ -1,8 +1,8 @@
 {
   "singleQuote": true,
   "quoteProps": "as-needed",
-  "arrowParens": "avoid",
-  "bracketSpacing": false,
+  "arrowParens": "always",
+  "bracketSpacing": true,
   "tabWidth": 2,
   "useTabs": false,
   "printWidth": 100,
