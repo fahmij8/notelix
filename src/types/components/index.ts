@@ -2,7 +2,6 @@ export type InputProps = {
   type?: React.HTMLInputTypeAttribute;
   name: string;
   size?: 'small' | 'medium' | 'large';
-  label?: string;
   className?: React.ClassAttributes<HTMLInputElement>;
   placeholder?: string;
   value?: string;
@@ -19,4 +18,22 @@ export type ButtonProps = {
   className?: React.ClassAttributes<HTMLButtonElement>;
   disabled?: boolean;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
+};
+
+export type TextareaProps = {
+  name: string;
+  cols: number;
+  rows: number;
+  value?: string;
+  className?: string;
+  placeholder?: string;
+  required?: boolean;
+  disabled?: boolean;
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement>;
+};
+
+export type LabelProps = {
+  children: React.ReactNode;
+  name: string;
+  className?: string;
 };
