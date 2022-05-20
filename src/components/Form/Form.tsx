@@ -71,7 +71,7 @@ function Form({ setNotes, notes }: FormProps) {
             isFocused || form.body.length > 0 ? '' : '!hidden '
           }`}
         >
-          <Button size="medium" type="submit">
+          <Button size="medium" type="submit" className="rounded-lg">
             Add Note
           </Button>
         </div>
