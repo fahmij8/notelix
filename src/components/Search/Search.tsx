@@ -6,9 +6,11 @@ import { useSearchValue } from 'hooks';
 
 function Search({ className }: SearchProps) {
   const { value, setValue } = useSearchValue();
-
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+  };
   return (
-    <form className={`flex flex-row items-center ${className ?? ''}`}>
+    <form onSubmit={handleSubmit} className={`flex flex-row items-center ${className ?? ''}`}>
       <Input
         size="medium"
         type="text"
