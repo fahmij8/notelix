@@ -51,4 +51,11 @@ export type ModalProps = {
 
 export type SearchProps = { className?: string };
 
-export type FormProps = { notes: Note[]; setNotes: (notes: Note[]) => void };
+export interface FormProps {
+  notes: Note[];
+  setNotes: (notes: Note[]) => void;
+}
+
+export interface NoteCardProps extends FormProps {
+  note: Note;
+}
